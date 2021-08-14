@@ -6,7 +6,7 @@ import "./HeaderCartButton.css";
 const HeaderCartButton = (props) => {
   const cartCtx = useContext(CartContext);
   const numberOfItemsForBadge = cartCtx.items.reduce((current, item) => {
-    return current + item.totalAmount;
+    return current + item.amount;
   }, 0);
   return (
     <div className="button" onClick={props.onClick}>
